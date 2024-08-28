@@ -27,7 +27,7 @@ const UserName = ({ setValidation, setFlag }) => {
       .then((response) => {
         if (response.data) {
           router.replace("/home");
-          dispatchEvent(addUsername(response.data.username));
+          dispatchEvent(addUsername(response.data));
           dispatchEvent(setToken(true));
         } else {
           Alert.alert("Something went wrong in username");

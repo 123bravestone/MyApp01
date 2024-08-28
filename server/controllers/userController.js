@@ -6,15 +6,16 @@ export const createUser = async (req, res) => {
     const { username, mobileNum, otp, userId } = req.body;
     const existingUser = await User.findOne({ mobileNum });
     if (existingUser && mobileNum) {
-      return res.status(201).json(existingUser);
+      return res.status(201).json(existingUser._id);
     } else if (!existingUser && mobileNum) {
-      const user = await User.create({ mobileNum });
-      res.status(201).json(user);
+      const user = await User.create({ mobileNum: mobileNum });
+      res.status(201).json(user._id);
     } else if (userId && otp) {
       try {
         const user = await User.findOne({ _id: userId, otp: otp });
         if (user) {
-          return res.status(201).json(user);
+          const userDetail = { _id: user._id, username: user.username };
+          return res.status(201).json(userDetail);
         } else {
           return res.status(201).json(false);
         }
@@ -27,7 +28,7 @@ export const createUser = async (req, res) => {
         { username: username },
         { new: true }
       );
-      return res.status(201).json(user);
+      return res.status(201).json(user.username);
     }
   } catch (error) {
     res.status(402).json({ error: error.message });

@@ -14,8 +14,10 @@ const sendSMS = async (toMobile, msg) => {
 
   try {
     await client.messages.create(msgOption);
+    return true;
   } catch (error) {
     console.log("error SMS");
+    return false;
   }
 };
 
@@ -31,18 +33,24 @@ const sendSMS = async (toMobile, msg) => {
 export const sentOTP = async (req, res, next) => {
   try {
     const otp = randomNumber();
-    console.log("OTP", otp);
-    const user = await User.findOneAndUpdate(
-      { mobileNum: req.body.mobileNum },
-      { otp: otp },
-      { new: true }
-    );
 
-    const message = `FOOD HOUSE, Your OTP is ${otp}. Don't share your OTP with anyone.`;
+    const message = `MyMess, Your OTP is ${otp}. Don't share your OTP with anyone.`;
     const toMobile = req.body.mobileNum;
 
-    sendSMS(`+91${toMobile}`, message);
-    res.status(200).json({ message: "Message sent" });
+    const msg = await sendSMS(`+91${toMobile}`, message);
+
+    if (msg === true) {
+      await User.findOneAndUpdate(
+        { mobileNum: req.body.mobileNum },
+        { otp: otp },
+        { new: true }
+      );
+      console.log("OTP", otp);
+    } else {
+      console.log("otp not send");
+    }
+
+    res.status(200).json(msg);
   } catch (error) {
     next(error);
   }

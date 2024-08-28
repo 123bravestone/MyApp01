@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Alert, Image, Text, TouchableOpacity, View } from "react-native";
+import { Image, View } from "react-native";
 import MobileLogin from "../../components/Authentication/MobileLogin";
 import OTPVerification from "../../components/Authentication/OTPVerification";
 import UserName from "../../components/Authentication/UserName";
@@ -7,6 +7,7 @@ import UserName from "../../components/Authentication/UserName";
 const Authentication = () => {
   const [flag, setFlag] = useState(false);
   const [validation, setValidation] = useState(false);
+  const [ID, setID] = useState("");
 
   return (
     <>
@@ -19,9 +20,13 @@ const Authentication = () => {
             />
           </View>
           {!flag ? (
-            <MobileLogin setFlag={setFlag} />
+            <MobileLogin setFlag={setFlag} setID={setID} />
           ) : (
-            <OTPVerification setValidation={setValidation} setFlag={setFlag} />
+            <OTPVerification
+              setValidation={setValidation}
+              setFlag={setFlag}
+              ID={ID}
+            />
           )}
         </View>
       ) : (

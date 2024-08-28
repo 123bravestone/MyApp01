@@ -11,25 +11,29 @@ import {
 import React, { useEffect, useState } from "react";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import OTPTextView from "react-native-otp-textinput";
+import { setToken } from "../../store/CreateSlices/UserSlice.js";
 import axios from "axios";
-import { useSelector } from "react-redux";
 import { useRouter } from "expo-router";
+import { useDispatch } from "react-redux";
 
-const OTPVerification = ({ setValidation, setFlag }) => {
+const OTPVerification = ({ setValidation, setFlag, ID }) => {
   const router = useRouter();
   const [otp, setOtp] = useState("");
-  const { userId } = useSelector((state) => state.user);
+
+  const dispatchEvent = useDispatch();
 
   const submitOTP = async () => {
-    if (otp.length > 0) {
+    if (otp.length > 0 && ID) {
       await axios
         .post(`${process.env.EXPO_PUBLIC_API_URL}/api/user/verify_user`, {
           otp: otp,
-          userId: userId,
+          userId: ID,
         })
         .then((response) => {
-          if (response.data) {
+          if (response.data._id) {
             if (response.data.username) {
+              dispatchEvent(setToken(true));
+
               router.replace("/home");
             } else {
               setValidation(true);
@@ -45,6 +49,8 @@ const OTPVerification = ({ setValidation, setFlag }) => {
         });
     } else if (otp.length === 0) {
       Alert.alert("Please enter OTP");
+    } else {
+      Alert.alert("Please enter valid OTP");
     }
   };
 
@@ -74,52 +80,40 @@ const OTPVerification = ({ setValidation, setFlag }) => {
     return () => backHandler.remove();
   }, []);
   return (
-    <View className="flex-[2]">
-      {false ? (
-        <View className="items-center justify-center bg-blue-400 px-[20px] pb-[4px]">
-          <TouchableOpacity onPress={() => Alert.alert("Success")}>
-            <Text className="text-[26px] font-[800]  text-[#070707] ">
-              Success
-            </Text>
-          </TouchableOpacity>
+    <View className="flex-[2] items-center bg-white">
+      <View className=" items-center justify-center ">
+        <Text className="text-[26px] font-[800]  text-[#0baf79] ">
+          OTP Verification
+        </Text>
+        <Text className="text-[16px] text-center w-[260px] font-semibold text-[#7b7e7ce5] ">
+          We have sent the verification code to your mobile number
+        </Text>
+      </View>
+      <KeyboardAwareScrollView className=" mt-[40px] ">
+        <OTPTextView
+          textInputStyle={style.OTPstyle}
+          handleTextChange={(text) => setOtp(text)}
+          inputCount={5}
+          tintColor={"#10b98f"}
+        />
+        <View className="flex-row justify-between ">
+          <Text className="text-[18px] text-[#10b98f] font-bold py-2">
+            Resend OTP
+          </Text>
+          <Text className="text-[18px] text-[#10b98f] font-bold py-2">
+            00:00
+          </Text>
         </View>
-      ) : (
-        <View className=" items-center bg-white ">
-          <View className=" items-center justify-center ">
-            <Text className="text-[26px] font-[800]  text-[#0baf79] ">
-              OTP Verification
-            </Text>
-            <Text className="text-[16px] text-center w-[260px] font-semibold text-[#7b7e7ce5] ">
-              We have sent the verification code to your mobile number
-            </Text>
-          </View>
-          <KeyboardAwareScrollView className=" mt-[40px] ">
-            <OTPTextView
-              textInputStyle={style.OTPstyle}
-              handleTextChange={(text) => setOtp(text)}
-              inputCount={5}
-              tintColor={"#10b98f"}
-            />
-            <View className="flex-row justify-between ">
-              <Text className="text-[18px] text-[#10b98f] font-bold py-2">
-                Resend OTP
-              </Text>
-              <Text className="text-[18px] text-[#10b98f] font-bold py-2">
-                00:00
-              </Text>
-            </View>
 
-            <TouchableOpacity
-              onPress={() => submitOTP()}
-              className="mt-[28px] bg-[#10b98f] rounded-[10px] py-4"
-            >
-              <Text className="text-[18px] text-center text-[#ffffff] uppercase font-bold ">
-                Submit
-              </Text>
-            </TouchableOpacity>
-          </KeyboardAwareScrollView>
-        </View>
-      )}
+        <TouchableOpacity
+          onPress={() => submitOTP()}
+          className="mt-[28px] bg-[#10b98f] rounded-[10px] py-4"
+        >
+          <Text className="text-[18px] text-center text-[#ffffff] uppercase font-bold ">
+            Submit
+          </Text>
+        </TouchableOpacity>
+      </KeyboardAwareScrollView>
     </View>
   );
 };

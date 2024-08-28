@@ -7,6 +7,8 @@ export const UserSlice = createSlice({
     userId: "",
     token: false,
     username: "",
+    isAdmin: false,
+    menuImage: "",
   },
 
   reducers: {
@@ -19,8 +21,15 @@ export const UserSlice = createSlice({
     addUsername: (state, action) => {
       state.username = action.payload;
     },
+    addAdmin: (state, action) => {
+      state.isAdmin = action.payload;
+    },
+    addMenuImage: (state, action) => {
+      state.menuImage = action.payload;
+    },
   },
 });
 
-export const { setUserID, setToken, addUsername } = UserSlice.actions;
+export const { setUserID, setToken, addUsername, addAdmin, addMenuImage } =
+  UserSlice.actions;
 export default UserSlice.reducer;

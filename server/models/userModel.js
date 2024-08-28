@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
   mobileNum: {
     type: Number,
     required: true,
-    unique: false,
+    unique: true,
   },
   otp: {
     type: Number,
