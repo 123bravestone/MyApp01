@@ -3,9 +3,9 @@ import React, { useEffect } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
-import DashBoard_Page from "../../../../components/DashBoard/DashBoard_Page";
+import DashBoard_Page from "../../../components/DashBoard/DashBoard_Page";
 import { router } from "expo-router";
-import User_Details from "../../../../components/DashBoard/User_Details";
+import User_Details from "../../../components/DashBoard/User_Details";
 import { useSelector } from "react-redux";
 
 const Dashboard = () => {

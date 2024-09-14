@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#0a7ea4",
+        choco: "#853e3a",
       },
       fontFamily: {
         baloo: ["Baloo-Regular", "sans-serif"],

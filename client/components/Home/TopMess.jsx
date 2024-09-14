@@ -95,7 +95,7 @@ const TopMess = () => {
               activeOpacity={0.8}
               onPress={() => {
                 router.push({
-                  pathname: "/pages/mess_profile",
+                  pathname: "/pages/mess_details",
                   params: {
                     id: item.id,
                     name: item.name,

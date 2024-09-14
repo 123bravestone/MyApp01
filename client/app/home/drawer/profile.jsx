@@ -1,7 +1,7 @@
 import { View, Text, ScrollView } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import Mess_Profile from "../../../../components/Mess_Profile";
+import Mess_Profile from "../../../components/Mess_Profile";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { router } from "expo-router";
 

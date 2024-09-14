@@ -4,21 +4,21 @@ import React, { useEffect } from "react";
 
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import ScreenImage from "../../../../components/Home/ScreenImage";
-import User_Institutions from "../../../../components/Home/User_Institutions";
-import Header from "../../../../components/Home/Header";
-import TopMess from "../../../../components/Home/TopMess";
+import ScreenImage from "../../../../components/Home/ScreenImage.jsx";
+import User_Institutions from "../../../../components/Home/User_Institutions.jsx";
+import Header from "../../../../components/Home/Header.jsx";
+import TopMess from "../../../../components/Home/TopMess.jsx";
 import { useDispatch, useSelector } from "react-redux";
-import { addAdmin } from "../../../../store/CreateSlices/UserSlice";
+import { addAdmin } from "../../../../store/CreateSlices/UserSlice.js";
 
-import { Colors } from "../../../../constants";
+import { Colors } from "../../../../constants/index.js";
 import { PieChart } from "react-native-gifted-charts";
-import Admin_Header from "../../../../components/Home/Admin/Admin_Header";
-import ExpenseBlock from "../../../../components/Home/Admin/ExpenseBlock";
+import Admin_Header from "../../../../components/Home/Admin/Admin_Header.jsx";
+import ExpenseBlock from "../../../../components/Home/Admin/ExpenseBlock.jsx";
 import ExpensList from "../../../../data/expenses.json";
-import IncomeBlock from "../../../../components/Home/Admin/IncomeBlock";
+import IncomeBlock from "../../../../components/Home/Admin/IncomeBlock.jsx";
 import IncomeList from "../../../../data/income.json";
-import SpendingBlock from "../../../../components/Home/Admin/SpendingBlock";
+import SpendingBlock from "../../../../components/Home/Admin/SpendingBlock.jsx";
 import SpendingList from "../../../../data/spending.json";
 
 const homeScreen = () => {
@@ -70,12 +70,12 @@ const homeScreen = () => {
                   }}
                 >
                   <View style={{ gap: 10 }}>
-                    <Text style={{ color: Colors.white, fontSize: 16 }}>
+                    <Text style={{ color: Colors.black, fontSize: 16 }}>
                       My <Text style={{ fontWeight: "700" }}>Expenses</Text>
                     </Text>
                     <Text
                       style={{
-                        color: Colors.white,
+                        color: Colors.black,
                         fontSize: 32,
                         fontWeight: "700",
                       }}
@@ -94,7 +94,7 @@ const homeScreen = () => {
                       semiCircle
                       radius={70}
                       innerRadius={50}
-                      innerCircleColor={Colors.black}
+                      innerCircleColor={Colors.white}
                       centerLabelComponent={() => {
                         return (
                           <View
@@ -106,7 +106,7 @@ const homeScreen = () => {
                             <Text
                               style={{
                                 fontSize: 20,
-                                color: "white",
+                                color: "black",
                                 fontWeight: "bold",
                               }}
                             >
@@ -149,7 +149,7 @@ export default homeScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.black,
+    backgroundColor: "#cecccc",
     paddingHorizontal: 20,
   },
 });

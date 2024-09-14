@@ -1,7 +1,7 @@
 import { View, Text, Image, Dimensions } from "react-native";
 import React from "react";
 import { Tabs } from "expo-router";
-import { icons } from "../../constants";
+import { icons } from "../../../../constants";
 import { useSelector } from "react-redux";
 
 const TabIcon = ({ icon, color, name, focused }) => {
@@ -40,6 +40,7 @@ const TabLayout = () => {
   return (
     <Tabs
       screenOptions={{
+        tabBarHideOnKeyboard: true,
         tabBarActiveTintColor: "#853e3a",
         tabBarInactiveTintColor: "#ffffff",
         tabBarShowLabel: false,
@@ -53,7 +54,7 @@ const TabLayout = () => {
       className="bg-[#b62921]"
     >
       <Tabs.Screen
-        name="home"
+        name="homeScreen"
         options={{
           title: "Home",
           headerShown: false,

@@ -4,4 +4,5 @@ export default {
   grey: "#242424",
   tintColor: "#723feb",
   blue: "#97e0f7",
+  choco: "#853e3a",
 };

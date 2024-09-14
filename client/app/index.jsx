@@ -4,9 +4,7 @@ import { useSelector } from "react-redux";
 
 const index = () => {
   const { token } = useSelector((state) => state.user);
-  return (
-    <>{token ? <Redirect href="/(tabs)/home" /> : <Redirect href="/auth" />}</>
-  );
+  return <>{token ? <Redirect href="/home" /> : <Redirect href="/auth" />}</>;
 };
 
 export default index;

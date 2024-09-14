@@ -10,13 +10,14 @@ const DashBoard_Page = () => {
     <View className="flex-1 py-4">
       <TouchableOpacity
         onPress={() => {
-          Alert.alert("Get 10% OFF on your Food Membership");
+          router.push("/pages/member_payment_status");
+          // Alert.alert("Get 10% OFF on your Food Membership");
         }}
         className="flex-row items-center justify-between bg-[#853e3a] px-4 py-[25px] rounded-[16px] mt-4 mx-2"
       >
         <View className="flex-1 flex-col gap-1">
           <Text className="text-white font-bold text-[18px] ">
-            Your Membership Subscriber
+            Food Members Payment Status:
           </Text>
           <Text className="text-white text-[12px] font-semibold">
             Your food members details and you can track all the info related to
@@ -26,71 +27,6 @@ const DashBoard_Page = () => {
 
         <Text className="text-[#853e3a] bg-[#ffffff] px-4 py-[8px]  rounded-[8px] text-[16px] font-bold ">
           View
-        </Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        onPress={() => {
-          Alert.alert("Get 10% OFF on your Food Membership");
-        }}
-        className="flex-row items-center justify-between bg-[#853e3a] px-4 py-[25px] rounded-[16px] mt-4 mx-2"
-      >
-        <View className="flex-1 flex-col gap-1">
-          <Text className="text-white font-bold text-[18px] ">
-            Mess Food Menu
-          </Text>
-          <Text className="text-white text-[12px] font-semibold">
-            Your menu details and you can update your food menu at anytime
-          </Text>
-        </View>
-
-        <Text className="text-[#853e3a] bg-[#ffffff] px-4 py-[8px]  rounded-[8px] text-[16px] font-bold ">
-          View
-        </Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        onPress={() => {
-          router.push("/dashboard/add_members");
-        }}
-        className="flex-row items-center justify-between bg-[#853e3a] px-4 py-[25px] rounded-[16px] mt-4 mx-2"
-      >
-        <View className="flex-1 flex-col gap-1">
-          <Text className="text-white font-bold text-[18px] ">
-            Add Food Members
-          </Text>
-          <Text className="text-white text-[12px] font-semibold">
-            Check your all transaction history, your all payment records and
-            details are here
-          </Text>
-        </View>
-
-        <Text className="text-[#853e3a] bg-[#ffffff] px-4 py-[8px]  rounded-[8px] text-[16px] font-bold ">
-          Add
-        </Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        onPress={() => {
-          Alert.alert("Get 10% OFF on your Food Membership");
-        }}
-        style={{
-          shadowOffset: { width: 0, height: 4 },
-          shadowOpacity: 0.25,
-          shadowRadius: 3.84,
-          elevation: 5,
-        }}
-        className="flex-row items-center justify-between bg-[#ffffff] px-4 py-[25px] rounded-[16px] mt-4 mx-2"
-      >
-        <View className="flex-1 flex-col gap-1">
-          <Text className="text-black font-bold text-[18px] ">Add Mess</Text>
-          <Text className="text-[#525252] text-[12px] font-semibold">
-            Add your mess details and you can update your mess at anytime
-          </Text>
-        </View>
-
-        <Text className="text-[#ffffff] bg-[#8a059e] px-4 py-[8px]  rounded-[8px] text-[16px] font-bold ">
-          Add
         </Text>
       </TouchableOpacity>
 

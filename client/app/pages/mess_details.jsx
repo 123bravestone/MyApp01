@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 import Mess_Details from "../../components/Mess_Details.jsx";
 import { heightPercentageToDP as hp } from "react-native-responsive-screen";
 
-const Mess_Proflie = () => {
+const Mess_Profile_Details = () => {
   const params = useLocalSearchParams();
   const dispatchEvent = useDispatch();
 
@@ -51,4 +51,4 @@ const Mess_Proflie = () => {
   );
 };
 
-export default Mess_Proflie;
+export default Mess_Profile_Details;

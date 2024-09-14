@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "image": "https://images.unsplash.com/photo-1575936123452-b67c3203c294?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80",
+    "menuImage": "../assets/images/menu-card_screen.jpg",
+    "name": "Chandan Mess Hotel",
+    "college": "JNKT Medical College And Hospital, Madhepura",
+    "breakfast": {
+      "id": 1,
+      "monthlyPrice": 1499,
+      "dailyPrice": 39,
+      "time": "08:00 - 11:00 AM"
+    },
+    "lunch": {
+      "id": 2,
+      "monthlyPrice": 1999,
+      "dailyPrice": 69,
+      "time": "01:00 - 04:00 PM"
+    },
+    "dinner": {
+      "id": 3,
+      "monthlyPrice": 1999,
+      "dailyPrice": 69,
+      "time": "08:00 - 11:00 PM"
+    },
+    "description": "We provide quality and test food to our customers",
+    "rating": 4.5,
+    "mess_status": true,
+    "minPrice": 2299,
+    "avg_cost": "₹3299 - ₹4699",
+
+    "user_members": [
+      {
+        "id": 1,
+        "name": "Kamal",
+        "roll": "20234",
+        "student": true,
+        "paid": true,
+        "code": "12341",
+        "time": "dynamic",
+        "payment_Date": "2023-10-25",
+        "joining_Date": "2023-10-25",
+        "joining_Time": "09:00 AM",
+        "food_status": true,
+        "remaining_Days": 15
+      },
+      {
+        "id": 2,
+        "name": "Arnav",
+        "roll": "20294",
+        "student": true,
+        "paid": false,
+        "code": "12342",
+        "time": "dynamic",
+        "payment_Date": "2023-10-25",
+        "joining_date": "2023-10-25",
+        "joining_time": "09:00 AM",
+        "food_status": true,
+        "remaining_days": 15
+      },
+      {
+        "id": 3,
+        "name": "Faizan",
+        "roll": "20124",
+        "student": true,
+        "paid": true,
+        "code": "12343",
+        "time": "dynamic",
+        "payment_Date": "2023-10-25",
+        "joining_date": "2023-10-25",
+        "joining_time": "09:00 AM",
+        "food_status": true,
+        "remaining_days": 15
+      },
+      {
+        "id": 4,
+        "name": "Samira",
+        "roll": "20954",
+        "student": true,
+        "paid": false,
+        "code": "12344",
+        "time": "dynamic",
+        "payment_Date": "2023-10-25",
+        "joining_date": "2023-10-25",
+        "joining_time": "09:00 AM",
+        "food_status": true,
+        "remaining_days": 15
+      },
+      {
+        "id": 5,
+        "name": "Hafiz",
+        "roll": "20634",
+        "student": true,
+        "paid": true,
+        "code": "12345",
+        "payment_Date": "2023-10-25",
+        "joining_date": "2023-10-25",
+        "joining_time": "09:00 AM",
+        "food_status": true,
+        "remaining_days": 15
+      },
+      {
+        "id": 6,
+        "name": "Salman",
+        "roll": "21244",
+        "student": true,
+        "paid": true,
+        "code": "12346",
+        "payment_Date": "2023-10-25",
+        "joining_date": "2023-10-25",
+        "joining_time": "09:00 AM",
+        "food_status": true,
+        "remaining_days": 15
+      },
+      {
+        "id": 7,
+        "name": "Adnan",
+        "roll": "23238",
+        "student": true,
+        "paid": true,
+        "code": "12347",
+        "payment_Date": "2023-10-25",
+        "joining_date": "2023-10-25",
+        "joining_time": "09:00 AM",
+        "food_status": true,
+        "remaining_days": 15
+      }
+    ]
+  }
+]

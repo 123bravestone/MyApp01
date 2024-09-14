@@ -1,4 +1,4 @@
-import { View, Text, FlatList, TouchableOpacity } from "react-native";
+import { View, Text, FlatList, TouchableOpacity, Alert } from "react-native";
 import React from "react";
 // import { IncomeType } from "@/types";
 import { Colors } from "../../../constants";
@@ -21,7 +21,8 @@ const IncomeBlock = ({ incomeList }) => {
     const amt = item.amount?.split(".");
     if (!amt) return null;
     return (
-      <View
+      <TouchableOpacity
+        onPress={() => Alert.alert(item.name)}
         style={{
           backgroundColor: Colors.grey,
           padding: 20,
@@ -59,13 +60,13 @@ const IncomeBlock = ({ incomeList }) => {
           ₹{amt[0]}.
           <Text style={{ fontSize: 12, color: "#cccbcb" }}>{amt[1]}</Text>
         </Text>
-      </View>
+      </TouchableOpacity>
     );
   };
 
   return (
     <View>
-      <Text style={{ color: "white", fontSize: 16, marginBottom: 20 }}>
+      <Text style={{ color: "black", fontSize: 16, marginBottom: 20 }}>
         My
         <Text style={{ fontWeight: "700" }}> Income</Text>
       </Text>

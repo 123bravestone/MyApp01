@@ -12,6 +12,7 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
+// import Admin_Data from "../data/admin.json";
 
 const Mess_Profile = () => {
   const { width } = Dimensions.get("window");

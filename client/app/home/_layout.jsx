@@ -1,4 +1,3 @@
-import { View, Text } from "react-native";
 import React from "react";
 import { Stack } from "expo-router";
 
@@ -7,6 +6,7 @@ const HomeLayout = () => {
     <>
       <Stack>
         <Stack.Screen name="drawer" options={{ headerShown: false }} />
+        <Stack.Screen name="add_expense" options={{ headerShown: false }} />
 
         {/* <Stack.Screen name="homeScreen" options={{ headerShown: false }} /> */}
         {/* <Stack.Screen name="profile" options={{ headerShown: false }} /> */}

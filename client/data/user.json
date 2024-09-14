@@ -1,0 +1,169 @@
+[
+  {
+    "id": "1",
+    "username": "Kamal",
+    "mobileNum": "03123456789",
+    "roll": "20234",
+    "email": "j@j.com",
+    "password": "123456",
+
+    "student": true,
+    "college": "JNKT Medical College And Hospital, Madhepura",
+    "mess": "Chandan Mess Hotel",
+    "paid": true,
+    "meal_expire_date": "2023-10-25",
+    "meal_expire_time": "09:00 AM",
+    "payment_Date": "2023-10-25",
+    "joining_Date": "2023-10-25",
+    "joining_Time": "09:00 AM",
+    "food_Status": [
+      {
+        "id": 1,
+        "status": true,
+        "date": "2023-10-25",
+        "time": "09:00 AM",
+        "code": "12341"
+      }
+    ],
+
+    "remaining_Days": 15,
+    "code": "12341"
+  },
+  {
+    "id": "2",
+    "username": "Arnav",
+    "mobileNum": "03123456789",
+    "roll": "20294",
+    "email": "j@j.com",
+    "password": "123456",
+
+    "student": true,
+    "college": "JNKT Medical College And Hospital, Madhepura",
+    "mess": "Chandan Mess Hotel",
+    "paid": false,
+    "meal_expire_date": "2023-10-25",
+    "meal_expire_time": "09:00 AM",
+    "payment_Date": "2023-10-25",
+    "joining_date": "2023-10-25",
+    "joining_time": "09:00 AM",
+    "food_Status": [
+      {
+        "id": 1,
+        "status": true,
+        "date": "2023-10-25",
+        "time": "09:00 AM",
+        "code": "22341"
+      }
+    ],
+    "remaining_Days": 15,
+    "code": "12342"
+  },
+  {
+    "id": "3",
+    "username": "Faizan",
+    "mobileNum": "03123456789",
+    "roll": "20124",
+    "email": "j@j.com",
+    "password": "123456",
+    "student": true,
+    "college": "JNKT Medical College And Hospital, Madhepura",
+    "mess": "Chandan Mess Hotel",
+    "paid": true,
+    "meal_expire_date": "2023-10-25",
+    "meal_expire_time": "09:00 AM",
+    "payment_Date": "2023-10-25",
+    "joining_date": "2023-10-25",
+    "joining_time": "09:00 AM",
+    "food_Status": [
+      {
+        "id": 1,
+        "status": true,
+        "date": "2023-10-25",
+        "time": "09:00 AM",
+        "code": "32341"
+      }
+    ],
+    "remaining_Days": 15,
+    "code": "12343"
+  },
+  {
+    "id": 4,
+    "name": "Samira",
+    "roll": "20954",
+    "student": true,
+    "paid": false,
+    "time": "dynamic",
+    "meal_expire_date": "2023-10-25",
+    "meal_expire_time": "09:00 AM",
+    "payment_Date": "2023-10-25",
+    "joining_date": "2023-10-25",
+    "joining_time": "09:00 AM",
+    "food_Status": [
+      {
+        "id": 1,
+        "status": true,
+        "date": "2023-10-25",
+        "time": "09:00 AM",
+        "code": "42341"
+      }
+    ],
+    "remaining_days": 15,
+    "code": "12344"
+  },
+  {
+    "id": "5",
+    "username": "Hafiz",
+    "mobileNum": "03123456789",
+    "roll": "20634",
+    "email": "j@j.com",
+    "password": "123456",
+    "student": true,
+    "college": "JNKT Medical College And Hospital, Madhepura",
+    "mess": "Chandan Mess Hotel",
+    "paid": true,
+    "meal_expire_date": "2023-10-25",
+    "meal_expire_time": "09:00 AM",
+    "payment_Date": "2023-10-25",
+    "joining_date": "2023-10-25",
+    "joining_time": "09:00 AM",
+    "food_Status": [
+      {
+        "id": 1,
+        "status": true,
+        "date": "2023-10-25",
+        "time": "09:00 AM",
+        "code": "42341"
+      }
+    ],
+    "remaining_Days": 15,
+    "code": "12345"
+  },
+  {
+    "id": "6",
+    "username": "Rizwan",
+    "mobileNum": "03123456789",
+    "roll": "20634",
+    "email": "j@j.com",
+    "password": "123456",
+    "student": true,
+    "college": "JNKT Medical College And Hospital, Madhepura",
+    "mess": "Chandan Mess Hotel",
+    "paid": true,
+    "meal_expire_date": "2023-10-25",
+    "meal_expire_time": "09:00 AM",
+    "payment_Date": "2023-10-25",
+    "joining_date": "2023-10-25",
+    "joining_time": "09:00 AM",
+    "food_Status": [
+      {
+        "id": 1,
+        "status": true,
+        "date": "2023-10-25",
+        "time": "09:00 AM",
+        "code": "42341"
+      }
+    ],
+    "remaining_Days": 15,
+    "code": "12346"
+  }
+]

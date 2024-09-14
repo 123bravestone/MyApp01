@@ -4,9 +4,11 @@ import { Stack } from "expo-router";
 const Page_Layout = () => {
   return (
     <Stack>
-      <Stack.Screen name="mess_profile" options={{ headerShown: false }} />
-      <Stack.Screen name="add_members" options={{ headerShown: false }} />
-      <Stack.Screen name="food_members" options={{ headerShown: false }} />
+      <Stack.Screen name="mess_details" options={{ headerShown: false }} />
+      <Stack.Screen
+        name="member_payment_status"
+        options={{ headerShown: false }}
+      />
     </Stack>
   );
 };

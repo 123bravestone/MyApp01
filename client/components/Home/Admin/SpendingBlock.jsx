@@ -17,7 +17,7 @@ const SpendingBlock = ({ spendingLish }) => {
 
   return (
     <View style={{ alignItems: "flex-start" }}>
-      <Text style={{ color: Colors.white, fontSize: 16, marginVertical: 20 }}>
+      <Text style={{ color: "black", fontSize: 16, marginVertical: 20 }}>
         July<Text style={{ fontWeight: "700" }}> Spending</Text>
       </Text>
 
